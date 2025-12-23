@@ -8,8 +8,9 @@ import (
 )
 
 var (
-	counter int = 0 // shared memory
-	lock        = NewRWLock()
+	counter int      = 0 // shared memory
+	lock    RWLocker = NewRWLock()
+	// lock RWLocker = NewRWLockFair()
 )
 
 func user(idx int) {

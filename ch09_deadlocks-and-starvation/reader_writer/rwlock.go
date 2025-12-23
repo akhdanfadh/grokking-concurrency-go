@@ -2,6 +2,13 @@ package main
 
 import "sync"
 
+type RWLocker interface {
+	AcquireRead()
+	ReleaseRead()
+	AcquireWrite()
+	ReleaseWrite()
+}
+
 // RWLock is a lock that allows multiple readers or one writer at a time.
 type RWLock struct {
 	readers   int
