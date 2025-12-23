@@ -29,8 +29,6 @@ func (p *Philosopher) Run(wg *sync.WaitGroup) {
 		p.Left.Acquire()
 		fmt.Printf("%s grabbed by %s now needs %s\n", p.Left.Name, p.Name, p.Right.Name)
 
-		time.Sleep(10 * time.Millisecond) // simulate thinking time, encourages deadlock
-
 		p.Right.Acquire()
 		fmt.Printf("%s grabbed by %s\n", p.Right.Name, p.Name)
 
