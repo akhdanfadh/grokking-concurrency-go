@@ -89,8 +89,6 @@ func testGarage(garage *Garage, numberOfCars int) {
 }
 
 func main() {
-	rand.New(rand.NewSource(time.Now().UnixNano()))
-
 	numberOfCars := 10
 	garage := NewGarage(TotalSpots)
 	// test garage by concurrently arriving cars

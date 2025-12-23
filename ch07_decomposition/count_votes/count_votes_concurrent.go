@@ -63,7 +63,6 @@ func main() {
 	numCandidates := 3
 	numVoters := 100000
 
-	rand.New(rand.NewSource(time.Now().UnixNano()))
 	pile := make([]int, numVoters)
 	for i := range pile {
 		pile[i] = 1 + rand.Intn(numCandidates)

@@ -40,8 +40,6 @@ func librarian() {
 }
 
 func main() {
-	rand.New(rand.NewSource(time.Now().UnixNano()))
-
 	var wg sync.WaitGroup
 	wg.Add(3)
 	go func() { defer wg.Done(); user(0) }()

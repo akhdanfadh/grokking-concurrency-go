@@ -31,9 +31,6 @@ var (
 )
 
 func init() {
-	// set seed for random ghost movement
-	rand.New(rand.NewSource(time.Now().UnixNano()))
-
 	// initialize dots in all positions
 	for x := range GameWidth {
 		for y := range GameHeight {
